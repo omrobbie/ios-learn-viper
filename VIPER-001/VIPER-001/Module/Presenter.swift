@@ -7,10 +7,16 @@
 
 import Foundation
 
+enum FetchError: Error {
+    case failed
+}
+
 protocol AnyPresenter {
     var router: AnyRouter? {get set}
     var view: AnyView? {get set}
     var interactor: AnyInteractor? {get set}
+
+    func interactorDidFetchUsers(with result: Result<[User], Error>)
 }
 
 class UserPresenter: AnyPresenter {
@@ -20,6 +26,15 @@ class UserPresenter: AnyPresenter {
     var interactor: AnyInteractor? {
         didSet {
             interactor?.getUser()
+        }
+    }
+
+    func interactorDidFetchUsers(with result: Result<[User], Error>) {
+        switch result {
+        case .success(let users):
+            print(users)
+        case .failure:
+            print("Something went wrong!")
         }
     }
 }
