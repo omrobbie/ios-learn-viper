@@ -6,3 +6,13 @@
 //
 
 import Foundation
+
+protocol AnyPresenter {
+    var router: AnyRouter? {get set}
+    var view: AnyView? {get set}
+}
+
+class UserPresenter: AnyPresenter {
+    var router: AnyRouter?
+    var view: AnyView?
+}

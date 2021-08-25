@@ -14,11 +14,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
 
-        let viewController = UIViewController()
-        viewController.view.backgroundColor = .systemBlue
+        let router = UserRouter.start()
+        let initialViewController = router.entryPoint
 
         let window = UIWindow.init(windowScene: windowScene)
-        window.rootViewController = viewController
+        window.rootViewController = initialViewController
         self.window = window
         window.makeKeyAndVisible()
     }

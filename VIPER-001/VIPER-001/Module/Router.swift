@@ -5,4 +5,32 @@
 //  Created by omrobbie on 25/08/21.
 //
 
-import Foundation
+import UIKit
+
+typealias EntryPoint = AnyView & UIViewController
+
+protocol AnyRouter {
+    var entryPoint: EntryPoint? {get}
+
+    static func start() -> AnyRouter
+}
+
+class UserRouter: AnyRouter {
+    var entryPoint: EntryPoint?
+
+    static func start() -> AnyRouter {
+        let router = UserRouter()
+
+        var view: AnyView = UserView()
+        var presenter: AnyPresenter = UserPresenter()
+
+        view.presenter = presenter
+
+        presenter.router = router
+        presenter.view = view
+
+        router.entryPoint = view as? EntryPoint
+
+        return router
+    }
+}
