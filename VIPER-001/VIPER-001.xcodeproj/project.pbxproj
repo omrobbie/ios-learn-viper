@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		FCEB1FD126D5C8B000BC690D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEB1FD026D5C8B000BC690D /* AppDelegate.swift */; };
 		FCEB1FD326D5C8B000BC690D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEB1FD226D5C8B000BC690D /* SceneDelegate.swift */; };
-		FCEB1FD526D5C8B000BC690D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEB1FD426D5C8B000BC690D /* ViewController.swift */; };
-		FCEB1FD826D5C8B000BC690D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCEB1FD626D5C8B000BC690D /* Main.storyboard */; };
 		FCEB1FDA26D5C8B100BC690D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCEB1FD926D5C8B100BC690D /* Assets.xcassets */; };
 		FCEB1FDD26D5C8B100BC690D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCEB1FDB26D5C8B100BC690D /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -19,8 +17,6 @@
 		FCEB1FCD26D5C8B000BC690D /* VIPER-001.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "VIPER-001.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCEB1FD026D5C8B000BC690D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FCEB1FD226D5C8B000BC690D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FCEB1FD426D5C8B000BC690D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		FCEB1FD726D5C8B000BC690D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FCEB1FD926D5C8B100BC690D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FCEB1FDC26D5C8B100BC690D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FCEB1FDE26D5C8B100BC690D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -56,15 +52,29 @@
 		FCEB1FCF26D5C8B000BC690D /* VIPER-001 */ = {
 			isa = PBXGroup;
 			children = (
-				FCEB1FD026D5C8B000BC690D /* AppDelegate.swift */,
-				FCEB1FD226D5C8B000BC690D /* SceneDelegate.swift */,
-				FCEB1FD426D5C8B000BC690D /* ViewController.swift */,
-				FCEB1FD626D5C8B000BC690D /* Main.storyboard */,
+				FCEB1FE526D5DFF800BC690D /* Setup */,
+				FCEB1FE426D5DFF000BC690D /* Supported Files */,
+			);
+			path = "VIPER-001";
+			sourceTree = "<group>";
+		};
+		FCEB1FE426D5DFF000BC690D /* Supported Files */ = {
+			isa = PBXGroup;
+			children = (
 				FCEB1FD926D5C8B100BC690D /* Assets.xcassets */,
 				FCEB1FDB26D5C8B100BC690D /* LaunchScreen.storyboard */,
 				FCEB1FDE26D5C8B100BC690D /* Info.plist */,
 			);
-			path = "VIPER-001";
+			path = "Supported Files";
+			sourceTree = "<group>";
+		};
+		FCEB1FE526D5DFF800BC690D /* Setup */ = {
+			isa = PBXGroup;
+			children = (
+				FCEB1FD026D5C8B000BC690D /* AppDelegate.swift */,
+				FCEB1FD226D5C8B000BC690D /* SceneDelegate.swift */,
+			);
+			path = Setup;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,7 +136,6 @@
 			files = (
 				FCEB1FDD26D5C8B100BC690D /* LaunchScreen.storyboard in Resources */,
 				FCEB1FDA26D5C8B100BC690D /* Assets.xcassets in Resources */,
-				FCEB1FD826D5C8B000BC690D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,7 +146,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FCEB1FD526D5C8B000BC690D /* ViewController.swift in Sources */,
 				FCEB1FD126D5C8B000BC690D /* AppDelegate.swift in Sources */,
 				FCEB1FD326D5C8B000BC690D /* SceneDelegate.swift in Sources */,
 			);
@@ -146,14 +154,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		FCEB1FD626D5C8B000BC690D /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FCEB1FD726D5C8B000BC690D /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		FCEB1FDB26D5C8B100BC690D /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -287,7 +287,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "VIPER-001/Info.plist";
+				INFOPLIST_FILE = "VIPER-001/Supported Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -305,7 +305,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "VIPER-001/Info.plist";
+				INFOPLIST_FILE = "VIPER-001/Supported Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
