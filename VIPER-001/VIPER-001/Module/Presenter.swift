@@ -32,9 +32,9 @@ class UserPresenter: AnyPresenter {
     func interactorDidFetchUsers(with result: Result<[User], Error>) {
         switch result {
         case .success(let users):
-            print(users)
+            view?.update(with: users)
         case .failure:
-            print("Something went wrong!")
+            view?.update(with: "Something went wrong!")
         }
     }
 }
