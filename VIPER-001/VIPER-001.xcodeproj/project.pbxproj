@@ -11,6 +11,11 @@
 		FCEB1FD326D5C8B000BC690D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEB1FD226D5C8B000BC690D /* SceneDelegate.swift */; };
 		FCEB1FDA26D5C8B100BC690D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCEB1FD926D5C8B100BC690D /* Assets.xcassets */; };
 		FCEB1FDD26D5C8B100BC690D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCEB1FDB26D5C8B100BC690D /* LaunchScreen.storyboard */; };
+		FCEB1FE826D5E23700BC690D /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEB1FE726D5E23700BC690D /* View.swift */; };
+		FCEB1FEA26D5E23F00BC690D /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEB1FE926D5E23F00BC690D /* Interactor.swift */; };
+		FCEB1FEC26D5E24500BC690D /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEB1FEB26D5E24500BC690D /* Presenter.swift */; };
+		FCEB1FEE26D5E25000BC690D /* Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEB1FED26D5E25000BC690D /* Entity.swift */; };
+		FCEB1FF026D5E25900BC690D /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEB1FEF26D5E25900BC690D /* Router.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +25,11 @@
 		FCEB1FD926D5C8B100BC690D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FCEB1FDC26D5C8B100BC690D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FCEB1FDE26D5C8B100BC690D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FCEB1FE726D5E23700BC690D /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		FCEB1FE926D5E23F00BC690D /* Interactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interactor.swift; sourceTree = "<group>"; };
+		FCEB1FEB26D5E24500BC690D /* Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
+		FCEB1FED26D5E25000BC690D /* Entity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entity.swift; sourceTree = "<group>"; };
+		FCEB1FEF26D5E25900BC690D /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +62,7 @@
 		FCEB1FCF26D5C8B000BC690D /* VIPER-001 */ = {
 			isa = PBXGroup;
 			children = (
+				FCEB1FE626D5E22A00BC690D /* Module */,
 				FCEB1FE526D5DFF800BC690D /* Setup */,
 				FCEB1FE426D5DFF000BC690D /* Supported Files */,
 			);
@@ -75,6 +86,18 @@
 				FCEB1FD226D5C8B000BC690D /* SceneDelegate.swift */,
 			);
 			path = Setup;
+			sourceTree = "<group>";
+		};
+		FCEB1FE626D5E22A00BC690D /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				FCEB1FE726D5E23700BC690D /* View.swift */,
+				FCEB1FE926D5E23F00BC690D /* Interactor.swift */,
+				FCEB1FEB26D5E24500BC690D /* Presenter.swift */,
+				FCEB1FED26D5E25000BC690D /* Entity.swift */,
+				FCEB1FEF26D5E25900BC690D /* Router.swift */,
+			);
+			path = Module;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,6 +171,11 @@
 			files = (
 				FCEB1FD126D5C8B000BC690D /* AppDelegate.swift in Sources */,
 				FCEB1FD326D5C8B000BC690D /* SceneDelegate.swift in Sources */,
+				FCEB1FEE26D5E25000BC690D /* Entity.swift in Sources */,
+				FCEB1FF026D5E25900BC690D /* Router.swift in Sources */,
+				FCEB1FEA26D5E23F00BC690D /* Interactor.swift in Sources */,
+				FCEB1FE826D5E23700BC690D /* View.swift in Sources */,
+				FCEB1FEC26D5E24500BC690D /* Presenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
