@@ -16,6 +16,9 @@ protocol AnyPresenter {
     var view: AnyView? {get set}
     var interactor: AnyInteractor? {get set}
 
+    func showLoading()
+    func hideLoading()
+
     func interactorDidFetchUsers(with result: Result<[User], Error>)
 }
 
@@ -27,6 +30,14 @@ class UserPresenter: AnyPresenter {
         didSet {
             interactor?.getUser()
         }
+    }
+
+    func showLoading() {
+        view?.showLoading()
+    }
+
+    func hideLoading() {
+        view?.hideLoading()
     }
 
     func interactorDidFetchUsers(with result: Result<[User], Error>) {

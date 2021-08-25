@@ -20,8 +20,11 @@ class UserInteractor: AnyInteractor {
         guard let url = URL(string: "https://jsonplaceholder.typicode.com/users") else {return}
 
         URLSession.shared.dataTask(with: url) { [weak self] data, _, error in
+            self?.presenter?.showLoading()
+
             guard let data = data, error == nil else {
                 self?.presenter?.interactorDidFetchUsers(with: .failure(FetchError.failed))
+                self?.presenter?.hideLoading()
                 return
             }
 
@@ -31,6 +34,8 @@ class UserInteractor: AnyInteractor {
             } catch {
                 self?.presenter?.interactorDidFetchUsers(with: .failure(error))
             }
+
+            self?.presenter?.hideLoading()
         }.resume()
     }
 }

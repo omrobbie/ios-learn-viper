@@ -10,6 +10,9 @@ import UIKit
 protocol AnyView {
     var presenter: AnyPresenter? {get set}
 
+    func showLoading()
+    func hideLoading()
+
     func update(with users: [User])
     func update(with error: String)
 }
@@ -18,6 +21,14 @@ class UserView: UIViewController, AnyView {
     var presenter: AnyPresenter?
 
     var users: [User] = []
+
+    private let activityIndicator: UIActivityIndicatorView = {
+        let indicator = UIActivityIndicatorView()
+        indicator.style = .large
+        indicator.hidesWhenStopped = true
+        indicator.isHidden = true
+        return indicator
+    }()
 
     private let tableView: UITableView = {
         let table = UITableView()
@@ -36,6 +47,7 @@ class UserView: UIViewController, AnyView {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
+        view.addSubview(activityIndicator)
         view.addSubview(tableView)
         view.addSubview(label)
         tableView.delegate = self
@@ -44,9 +56,22 @@ class UserView: UIViewController, AnyView {
 
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
+        activityIndicator.center = view.center
         tableView.frame = view.bounds
         label.frame = CGRect(x: 0, y: 0, width: 200, height: 50)
         label.center = view.center
+    }
+
+    func showLoading() {
+        DispatchQueue.main.async {
+            self.activityIndicator.startAnimating()
+        }
+    }
+
+    func hideLoading() {
+        DispatchQueue.main.async {
+            self.activityIndicator.stopAnimating()
+        }
     }
 
     func update(with users: [User]) {
