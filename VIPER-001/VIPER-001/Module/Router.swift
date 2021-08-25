@@ -23,11 +23,13 @@ class UserRouter: AnyRouter {
 
         var view: AnyView = UserView()
         var presenter: AnyPresenter = UserPresenter()
+        var interactor: AnyInteractor = UserInteractor()
 
         view.presenter = presenter
 
         presenter.router = router
         presenter.view = view
+        presenter.interactor = interactor
 
         router.entryPoint = view as? EntryPoint
 
